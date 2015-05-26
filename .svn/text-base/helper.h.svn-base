@@ -1,0 +1,13 @@
+void setbitmap(void *bitmap, int set, int location);
+unsigned int parent_conversion(const char *absolute_path);
+unsigned int search_inode(const char *absolute_path);
+unsigned int size_data_block(unsigned int *i_block);
+char file_or_dir(unsigned int parent_inode, unsigned int child_inode);
+char matched_name_fd(int blocknum, unsigned int child_inode);
+int * create_data_block(void *tablelocation, int i, int length_block);
+int matched_name(char*name, int blocknum, int inum);
+char *create_fdir_name(char *fdir_name, int length);
+char filetypecheck(char flag);
+int get_free_inode(void * inode_map);
+int get_free_block(void * blk_map);
+int check_free_bit(void * *bytes);

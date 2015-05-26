@@ -1,0 +1,23 @@
+1. Create a helpers.c that contains all the function that the function uses
+
+GENERAL HELPER FUNCTION 
+find_inode 
+    - current location (Default)
+    - full path 
+
+ext2_ls - 
+    * get the super block 
+    * read the root 
+    (loop starting from the root to destination)
+	* find folder entry 
+	* get the inode 
+        * read the data inside 
+    NOTE - if path doesn't match content return error message
+
+ext2_rm - 
+    * change the rec len 
+    * change the inode bitmap location to 0
+    * change the data bitmap location to 0
+    * free block count decrement
+    * free inode count decrement 
+     
